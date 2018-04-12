@@ -1,0 +1,63 @@
+__d(function (global, _require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  var _jsxFileName = "/home/kanthraj/Documents/react-native/react-redux-course/albums/src/components/header.js";
+
+  var _react = _require(_dependencyMap[0], "react");
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _reactNative = _require(_dependencyMap[1], "react-native");
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var Header = function Header(props) {
+    var textStyle = styles.textStyle,
+        viewStyle = styles.viewStyle;
+    return _react2.default.createElement(
+      _reactNative.View,
+      {
+        style: viewStyle,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        }
+      },
+      _react2.default.createElement(
+        _reactNative.Text,
+        {
+          style: textStyle,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 11
+          }
+        },
+        props.headerText
+      )
+    );
+  };
+
+  var styles = {
+    viewStyle: {
+      backgroundColor: '#3366ff',
+      padding: 20,
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: 60,
+      shadowColor: '#000',
+      shadowOffset: {
+        width: 0,
+        height: 5
+      },
+      shadowOpacity: 0.5,
+      elevation: 2,
+      position: 'relative'
+    },
+    textStyle: {
+      fontSize: 25,
+      color: '#fff'
+    }
+  };
+  exports.default = Header;
+});

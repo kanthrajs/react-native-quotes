@@ -21,6 +21,9 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     return _react2.default.createElement(
       _reactNative.View,
       {
+        style: {
+          flex: 1
+        },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 7

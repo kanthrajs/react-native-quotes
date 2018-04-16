@@ -1,0 +1,60 @@
+__d(function (global, _require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  var _jsxFileName = "/home/kanthraj/Documents/react-native/react-redux-course/albums/src/components/Button.js";
+
+  var _react = _require(_dependencyMap[0], "react");
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _reactNative = _require(_dependencyMap[1], "react-native");
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var Button = function Button(props) {
+    return _react2.default.createElement(
+      _reactNative.TouchableOpacity,
+      {
+        onPress: props.onPress,
+        style: styles.buttonStyle,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 6
+        }
+      },
+      _react2.default.createElement(
+        _reactNative.Text,
+        {
+          style: styles.textStyle,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 7
+          }
+        },
+        props.children
+      )
+    );
+  };
+
+  var styles = {
+    textStyle: {
+      alignSelf: 'center',
+      color: '#007aff',
+      fontSize: 16,
+      fontWeight: '600',
+      paddingTop: 10,
+      paddingBottom: 10
+    },
+    buttonStyle: {
+      flex: 1,
+      alignSelf: 'stretch',
+      backgroundColor: '#fff',
+      borderRadius: 1,
+      borderColor: '#007aff',
+      marginLeft: 5,
+      marginRight: 5
+    }
+  };
+  exports.default = Button;
+});

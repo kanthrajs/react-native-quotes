@@ -21,6 +21,10 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _axios2 = _interopRequireDefault(_axios);
 
+  var _AlbumDetail = _require(_dependencyMap[4], "./AlbumDetail");
+
+  var _AlbumDetail2 = _interopRequireDefault(_AlbumDetail);
+
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -72,7 +76,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       value: function componentWillMount() {
         var _this2 = this;
 
-        _axios2.default.get('https://rallycoding.herokuapp.com/api/music_albums').then(function (response) {
+        _axios2.default.get('http://rallycoding.herokuapp.com/api/music_albums').then(function (response) {
           return _this2.setState({
             albums: response.data
           });
@@ -82,17 +86,14 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       key: "renderAlbums",
       value: function renderAlbums() {
         return this.state.albums.map(function (album) {
-          return _react3.default.createElement(
-            _reactNative.Text,
-            {
-              key: album.title,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 13
-              }
-            },
-            album.title
-          );
+          return _react3.default.createElement(_AlbumDetail2.default, {
+            key: album.title,
+            album: album,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 14
+            }
+          });
         });
       }
     }, {
@@ -100,11 +101,11 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       value: function render() {
         console.log(this.state);
         return _react3.default.createElement(
-          _reactNative.View,
+          _reactNative.ScrollView,
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 19
+              lineNumber: 21
             }
           },
           this.renderAlbums()
